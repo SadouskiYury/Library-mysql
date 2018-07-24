@@ -1,0 +1,1 @@
+# MySQL library stores a table of books which is associated with the table of authors foreign key, has the ability to: display a list of books and authors; add a book;change the book; delete the book.
