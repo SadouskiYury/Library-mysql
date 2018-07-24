@@ -18,5 +18,5 @@ public class MainSqlPropertyManager {
 		return rb.getString("db.pass");
 		
 	}
-
+	
 }

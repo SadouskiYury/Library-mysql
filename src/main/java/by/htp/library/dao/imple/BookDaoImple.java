@@ -57,7 +57,7 @@ public class BookDaoImple implements BookDao {
 		int result = 0;
 		try (PreparedStatement ps = ConnectionBD.conectionWithDB(INSERT_BOOK);) {
 			Date birthday = new Date(book.getAuthor().getBirthDate().getTimeInMillis());
-			chekAuthor(book.getAuthor());
+			cheсkAuthor(book.getAuthor());
 			ps.setString(1, book.getTitle());
 			ps.setString(2, book.getAuthor().getName());
 			ps.setString(3, book.getAuthor().getMidlenme());
@@ -115,7 +115,7 @@ public class BookDaoImple implements BookDao {
 		return author;
 	}
 
-	private int chekAuthor(Author author) throws SQLException {
+	private int cheсkAuthor(Author author) throws SQLException {
 		Date birthday = new Date(author.getBirthDate().getTimeInMillis());
 		PreparedStatement ps = ConnectionBD.conectionWithDB(INSERT_AUTHOR);
 		ps.setString(1, author.getName());

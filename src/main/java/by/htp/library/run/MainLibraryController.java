@@ -19,13 +19,15 @@ public class MainLibraryController {
 		for (Book s : list)
 			System.out.println(s);
 
-		int res = dao.add(new Book("WARandPEACE",
-				new Author("Lev", "Nikolaevich", "Tolstoy", new GregorianCalendar(1872, 8, 9))));
-		System.out.println(res);
-		// dao.add(new Book("Война и мир", new Author("Лев ", "Николаевич", "Толстой",
-		// new GregorianCalendar(1872, 8, 9))));
-		dao.delete(list.get(list.size() - 1));
-		dao.update(list.get(list.size() - 2), "NewBOOK");
+//		int res = dao.add(new Book("WARandPEACE",
+//				new Author("Lev", "Nikolaevich", "Tolstoy", new GregorianCalendar(1872, 8, 9))));
+//		System.out.println(res);
+		 dao.add(new Book("Война и мир", new Author("Лев ", "Николаевич", "Толстой",
+		 new GregorianCalendar(1872, 8, 9))));
+		 dao.add(new Book("Война и мир", new Author("Михаил", "Афанасьевич", "Булгаков",
+				 new GregorianCalendar(1891, 4, 15))));
+//		dao.delete(list.get(list.size() - 1));
+		dao.update(list.get(list.size() - 2), "МАСТЕРиМАРГАРИТА");
 		System.out.println(dao.getMaxId("book"));
 	}
 
